@@ -2,7 +2,6 @@ package imapi
 
 import (
 	"context"
-	"fmt"
 	"sync"
 	"time"
 
@@ -94,7 +93,6 @@ func (c *Caller) GetAdminTokenCache(ctx context.Context, userID string) (string,
 }
 
 func (c *Caller) getAdminTokenServer(ctx context.Context, userID string) (string, error) {
-	fmt.Println("secret:", c.imSecret)
 	resp, err := getAdminToken.Call(ctx, c.imApi, &auth.GetAdminTokenReq{
 		Secret: c.imSecret,
 		UserID: userID,

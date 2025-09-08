@@ -7,6 +7,6 @@ rpc:
   ports: [ 30200 ]
 
 tokenPolicy:
-  expire: 90
+  expire: 36500
 
 secret: chat123
